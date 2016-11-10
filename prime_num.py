@@ -1,15 +1,19 @@
-def is_prime(x):
-    x = []
+def prime_num(x):
     
-    if x <= 0:
+    if not  isinstance(x, list):
+        return "Only Integers allowed"
+    
+    elif x <= 0:
         return False
     else:
-        if x == 2:
-            return True
-        else:
-            for i in range(2, x):
-                if x % i == 0:
-                    return False
-            return True
+        for n in x:
+            b = [2, 3]
+            if n % 2 == 0 and n % 3 == 0:
+                return False
+            else:
+                return b.append(n)
+        
+print prime_num([3, 5])
 
-print is_prime(3)
+
+
